@@ -1,5 +1,9 @@
 # ts-app
 
+## GraphQL
+1. schema db 和 graphql服务之间复用
+2. 合并请求，并行请求场景不存在？
+
 ## Project setup
 ```
 npm install

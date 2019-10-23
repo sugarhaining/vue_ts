@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('/src/assets/font/webfont.eot'); /* IE9 */
+    src: url('/src/assets/font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/src/assets/font/webfont.woff2') format('woff2'),
+    url('/src/assets/font/webfont.woff') format('woff'), /* chrome、firefox */
+    url('/src/assets/font/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/src/assets/font/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: wenquan;
+    src: url('/src/assets/font/WenQuanWeiMiHei-1.woff') format('woff');
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.ali-font {
+    font-family: "webfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.wenquan-font {
+    font-family: wenquan !important;
+}

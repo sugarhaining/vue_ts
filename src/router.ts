@@ -1,23 +1,40 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'message',
+      component: () => import('./views/Message.vue'),
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: '/notice',
+      name: 'notice',
+      component: () => import('./views/Notice.vue'),
+    },
+    {
+        path: '/lover',
+        name: 'lover',
+        component: () => import('./views/Lover.vue'),
+    },
+    {
+        path: '/daily-push',
+        name: 'daily-push',
+        component: () => import('./views/DailyPush.vue'),
+    },
+    {
+        path: '/home',
+        name: 'home',
+        component: () => import('./views/Home.vue'),
+    },
+    {
+        path: '/*',
+        redirect: '/lover',
     },
   ],
 });
+
+export default router;
