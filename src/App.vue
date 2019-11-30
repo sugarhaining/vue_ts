@@ -6,11 +6,11 @@
         inactive-color="#000"
         route
     >
-        <van-tabbar-item replace to="/" icon="comment">说给Ta</van-tabbar-item>
-        <van-tabbar-item replace to="/notice" icon="coupon">提醒Ta</van-tabbar-item>
-        <van-tabbar-item replace to="/lover" icon="like">Lover</van-tabbar-item>
-        <van-tabbar-item replace to="/daily-push" icon="play-circle">日推</van-tabbar-item>
-        <van-tabbar-item replace to="/home" icon="wap-home">爱Ta</van-tabbar-item>
+        <van-tabbar-item replace to="/" icon="comment">A</van-tabbar-item>
+        <van-tabbar-item replace to="/notice" icon="coupon">B</van-tabbar-item>
+        <van-tabbar-item replace to="/lover" icon="like">C</van-tabbar-item>
+        <van-tabbar-item replace to="/daily-push" icon="play-circle">D</van-tabbar-item>
+        <van-tabbar-item replace to="/home" icon="wap-home">E</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>

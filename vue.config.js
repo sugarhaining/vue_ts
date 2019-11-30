@@ -27,6 +27,25 @@ module.exports = {
         });
         return options;
       });
+      config.module
+      .rule('vue')
+      .use('vue-loader')
+      .loader('vue-loader')
+      .tap(options => {
+          options.transpileOptions = {
+          transforms: {
+              dangerousTaggedTemplateString: true,
+          },
+        }
+          return options
+      });
+      config.module
+      .rule('gql')
+      .test(/\.gql$/)
+      .use('graphql-tag/loader')
+      .loader('graphql-tag/loader')
+      .end()
+
       const oneOfsMap = config.module.rule('scss').oneOfs.store;
       oneOfsMap.forEach(item => {
         item
@@ -37,5 +56,11 @@ module.exports = {
           })
           .end()
       })
+  },
+  pluginOptions: {
+    apollo: {
+      enableMocks: false,
+      enableEngine: false
+    }
   }
 };

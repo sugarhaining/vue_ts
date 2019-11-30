@@ -1,23 +1,19 @@
 require('dotenv').config();
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
-const port = 8081;
-// const router = require('./router');
-const {graphql} = require('./graphql');
-const {dbConnect} = require('./db/');
+const {SERVER_PORT} = process.env;
+const {graphqlInit} = require('./graphql');
 
 const app = new Koa();
 
 app.use(bodyParser());
 
-dbConnect();
-graphql(app);
+graphqlInit(app);
 
-//  后端路由逻辑改为graphqlresolvers逻辑？
-//  router(app);
+//  后端路由逻辑改为graphql/resolvers逻辑？
 
-app.listen(port, () => {
-    console.log('server is running on port 8081');
+app.listen(SERVER_PORT, () => {
+    console.log(`server is running on port ${SERVER_PORT}`);
 });
 
 
